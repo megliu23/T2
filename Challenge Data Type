@@ -1,0 +1,41 @@
+//Initialize and declare, assign to variables. (int i = 4; double d = 4.0; String s = "Greehill ")
+//Import scanner package/ scanner and ask for 2 variables and a phrase.
+//Add i to the variable entered
+//Assign new sum as the output and print.
+//Add double d to input 2 and assign new sum as output 2 and print
+//String s plus sample input three
+package com.company;
+import java.util.Scanner;
+public class ChallengeDataType {
+    public static void main(String[] args) {
+        int integy1;
+        double doubly1;
+        String str1;
+
+        int integy2 = 4;
+        double doubly2 = 4.0;
+        String str2 = "Greenhill";
+
+        Scanner console = new Scanner(System.in);
+        System.out.println("Please enter in an integer: ");
+        integy1 = console.nextInt();
+        System.out.println("Please enter in a double");
+        doubly1 = console.nextDouble();
+        console = new Scanner(System.in);
+        System.out.println("Please enter in a string");
+        str1 = console.nextLine();
+
+        int calc1=integy1+integy2;
+        double calc2=doubly1+doubly2;
+        String calc3=(str1 + " " + str2);
+
+        System.out.printf("Integer answer: \n%10d", calc1);
+        System.out.println();
+        System.out.printf("Double answer: \n%10.1f", calc2);
+        System.out.println();
+        System.out.printf("String answer: \n" + calc3);
+
+
+
+
+    }}
