@@ -1,0 +1,49 @@
+ package com.company;
+ import java.util.*;
+   // Megan Liu
+ // 6/17/2020
+ // pseudocode:
+ //import scanner package and scanner
+ //initialize and declare variables
+ //print line phrase (price of meal)
+ //use scanner to get input
+ //print line phrase (tip percentage)
+ //scanner to get input
+ //print line phrase (tax rate)
+ //scanner to get input
+ //find equation to figure out the correct calculation for percentage
+ //get output
+        public class operators {
+
+            public static void main(String [] args) {
+                solve();
+            }
+
+            public static void solve(){
+                Scanner input = new Scanner(System.in);
+                double MealPrice;
+                double TipPercent;
+                double TaxRate;
+
+                // switched int to double
+
+
+                System.out.println("Please enter the price of your meal:");
+                MealPrice = input.nextDouble();
+
+                System.out.println("Please enter your tip percentage as an integer:");
+                TipPercent = input.nextInt();
+
+                System.out.println("Please enter your tax rate as an integer:");
+                TaxRate = input.nextInt();
+
+                double tipTotal = TipPercent / 100 * MealPrice;
+                double taxTotal = TaxRate / 100 * MealPrice;
+
+                double total = tipTotal + taxTotal + MealPrice;
+                System.out.print("Your total price is: ");
+                System.out.printf("\n%1.0f $", total);
+            }
+
+
+        }
