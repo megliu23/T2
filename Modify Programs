@@ -1,0 +1,19 @@
+package com.company;
+
+public class ModifyProgram {
+    public static void main(String[] args) { //main
+        //call all my functions
+        int bill1 = 38;
+        int bill2 = 40;
+        int bill3 = 30;
+        int subtotal = bill1 + bill2 + bill3;
+        final double TAX = 0.08;
+
+        double taxes = subtotal * TAX;
+        double tip = subtotal * 0.15;
+        double total = subtotal + taxes + tip;
+        System.out.println("Subtotal:$" + subtotal);
+        System.out.println("Tax:$" + taxes);
+        System.out.println("Tip:$" + tip);
+        System.out.println("Total:$" + total);
+    }}
