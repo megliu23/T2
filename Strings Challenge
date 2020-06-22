@@ -1,0 +1,50 @@
+//created by Megan Liu on 6/21/2020
+//create scanner
+// initialize variables
+// print line asking for amount of run times
+//find run times entered by user
+// ask for a word
+// create a string
+// string even and odd word
+// run the amount of times user entered
+
+package com.company;
+import java.util.Scanner;
+//imported scanner
+public class StringsChallenge {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String inputWord;
+        int runTimes;
+        //ask for amount of words then initialize
+        do {
+            System.out.print("How many words are you going to enter? it must be between 2 and 10");
+            runTimes = input.nextInt();
+        } while (runTimes <2 || runTimes >10);
+
+        for (int i=0; i < runTimes; i++) {
+            do {
+                System.out.println("Enter your word:");
+                inputWord = input.next();
+            } while (inputWord.length() <2 && inputWord.length() >10000);
+            String dividedWord = divideWord(inputWord);
+            System.out.println(dividedWord);
+
+        }
+
+    }
+
+    public static String divideWord(String inputWord) {
+        String evenWord = " ";
+        String oddWord = " ";
+        for (int even = 0; even < inputWord.length(); even += 2) {
+            char temp = inputWord.charAt(even);
+            evenWord = evenWord + temp;
+        }
+        for (int odd = 1; odd < inputWord.length(); odd += 2) {
+            char temp = inputWord.charAt(odd);
+            oddWord = oddWord + temp;
+        }
+        return (evenWord + " " + oddWord);
+    }
+}
