@@ -1,0 +1,51 @@
+//Created by Megan Liu on 6/23/2020
+//pseudocode:
+//import java util package
+//create a scanner
+//create a random
+//create 2 integers
+//first integer: how many numbers they are going to be (will be constraints)
+//constraints to make sure it is between 5-10 numbers
+//second integer: random numbers
+//create public static int reverse, reverse first integer
+//system.out.print arrays (array.to string(first integer))
+//system.out.print arrays (array.to string(second integer))
+//reverse second integer
+//system.out.print arrays (array.to string(second integer))
+//create the reverse method
+
+package com.company;
+import java.util.*;
+public class arrays {
+
+    public static void main(String[] args){
+        Random rand = new Random();
+        int Size = rand.nextInt(5)+5; //numbers between 5-15 use the range as a bound
+        int[] myArray = new int[Size]; //new array depending on the integer Size
+
+        for (int i = 0; i< Size; i++){
+            myArray[i] = rand.nextInt(100); //numbers up to 100 use the range as a bound
+
+        }
+        int index1;//these are the indexes that will randomly be swapped
+        int index2;
+        do{
+            index1 = rand.nextInt(Size);//instead of saying exactly wht index we are swapping it is random with Size
+            index2 = rand.nextInt(Size);// will randomly swap indexes
+        }while (index2 == index1); //while loop so it is simultaneously printing the arrays while the do loop is running
+        System.out.println(Arrays.toString(myArray));
+        swap (myArray, index1, index2);
+        System.out.println(Arrays.toString(myArray));
+    }
+
+    public static int[] swap(int[] swap, int index1, int index2) {
+        int temp = swap[index1];
+        swap[index1] = swap[index2]; //this is where the index1 is swapped to equal index2 swapped
+        swap[index2] = temp; //this is where the index2 is swapped to equal temp
+
+        return swap; //will return method back to initial caller
+    }
+
+}
+
+    
